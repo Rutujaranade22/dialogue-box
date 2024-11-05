@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dialog box</title>
+ 
 </head>
 <style>
      .center-button {
@@ -99,19 +100,20 @@ button {
             const closeDialogBtn = document.getElementById('closeDialog');
             const enrollmentForm = document.getElementById('enrollmentForm');
         
-            openDialogBtn.addEventListener('click', () => {
-              dialog.showModal();
-            });
-        
-            closeDialogBtn.addEventListener('click', () => {
-              dialog.close();
-            });
-        
-            enrollmentForm.addEventListener('submit', (event) => {
-              event.preventDefault();
-              alert('Enrollment form submitted successfully!');
-              dialog.close();
-            });
+            openDialogBtn.addEventListener('click', function() {
+  dialog.showModal();
+});
+
+closeDialogBtn.addEventListener('click', function() {
+  dialog.close();
+});
+
+enrollmentForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  alert('Enrollment form submitted successfully!');
+  dialog.close();
+});
+
           </script>
 </body>
 </html>
